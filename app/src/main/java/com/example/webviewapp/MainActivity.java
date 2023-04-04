@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showInternalWebPage(){
-        myWebView.loadUrl("https://www.google.com/");
+        myWebView.loadUrl("file:///android_asset/page.html");
     }
 
     @Override
@@ -30,8 +30,10 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         myWebView = findViewById(R.id.my_webview);
-        myWebView.getSettings().setJavaScriptEnabled(true);
         myWebView.setWebViewClient(new WebViewClient());
+        myWebView.getSettings().setJavaScriptEnabled(true);
+
+
         /*
         * Rename your App. Tip: Values->Strings
         * Enable Internet access for your App. Tip: Manifest
